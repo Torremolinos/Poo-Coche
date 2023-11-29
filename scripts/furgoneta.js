@@ -8,10 +8,10 @@ class Furgoneta extends Vehiculo {
         this.#pasajeros = pasajeros;
     }
 
-    get #pasajeros() {
+    get pasajeros() {
         return this.#pasajeros;
     }
-    set #pasajeros(value) {
+    set pasajeros(value) {
         this.#pasajeros = value;
     }
 }
