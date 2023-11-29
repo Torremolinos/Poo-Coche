@@ -1,0 +1,27 @@
+/*Añadiremos un keyframe.*/
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+ 
+p {
+    color: white    ;
+    font-family: "Vina Sans";
+}
+
+body{
+    /*esto seria la ruta de tu imagen*/
+    background-image: url('../assets/imgs/cochejpg.jpg');
+    /*cubrir toda el area del body*/
+    background-size: cover;
+    /*evitar que la imagen se repita*/
+    background-repeat: no-repeat;
+    /*Hacer que la imagen este fija*/
+    background-attachment: fixed;
+}
+
+@keyframes moverImagen{
+    from{
+        transform: translateX();
+    }
+    to{
+        
+    }
+}
