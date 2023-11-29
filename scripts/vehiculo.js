@@ -1,4 +1,6 @@
-class Vehiculo {
+//pensar los atributos y los metodos es abstraccion
+//y encapsular es poner en private y encerrar las cosas.
+export class Vehiculo {
     #marca; //private #.
     #modelo;
     #color;
@@ -87,4 +89,5 @@ class Vehiculo {
     set cilindrada(cilindrada) {
         this.#cilindrada = cilindrada;
     }
+
 }
