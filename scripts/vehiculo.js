@@ -1,93 +1,78 @@
-//pensar los atributos y los metodos es abstraccion
-//y encapsular es poner en private y encerrar las cosas.
-export class Vehiculo {
-    #marca; //private #.
+import { mostrarResultado } from "./main.js";
+ 
+export class Vehiculo{
+    #marca; //Con la # decimos que es private
     #modelo;
     #color;
     #fabricacion;
     #cilindrada;
-
-    constructor(marca, modelo, color, fabricacion, cilindrada) {
+ 
+    //Constructor con parámetros
+    constructor (marca, modelo, color,fabricacion,cilindrada){
         this.#marca = marca;
         this.#modelo = modelo;
         this.#color = color;
-        this.#fabricacion = fabricacion;
+        this.#fabricacion =fabricacion;
         this.#cilindrada = cilindrada;
     }
-
-    //constructor sin parametros
-    constructor() { }
-
-    mostrarDatos() {
-        const datos = `La marca es ->${this.#marca}
+ 
+    mostrarDatos(){
+        const datos = `
+        La marca es: ${this.#marca}
+        </br>
+        El modelo es: ${this.#modelo}
+        </br>
+        Su color es: ${this.#color}
         <br/>
-        El modelo es -> ${this.#modelo}
+        Se fabricó en el año: $ ${this.#fabricacion}
         <br/>
-        Su color es -> ${this.#color}
-        <br/>
-        Se fabricó el año -> ${this.#fabricacion}
-        <br/>
-        Cilindrada -> ${this.#cilindrada}`;
-
-        //llamar a la funcion mostrarREsultado definida en el main.js
-        mostrarResultado(`<p>${datos}</p>`);
+        Cilindrada: ${this.#cilindrada}
+        `;
+ 
+        //Llamar a la funcion mostrarResultado definida en el main.js
+        //Siempre llamamos a los privados con this
+    mostrarResultado(`<p>${datos}</p>`);
     }
-
-    acelerar(velocidad) {
-        const mensaje = `<br/> Se ha celerado hasta -> ${velocidad}`;
-        mostrarResultado(`<p>${datos}</p>`);
+    acelerar(velocidad){
+        const mensaje = `<br/>Se ha acelerado hasta: ${velocidad}`;
+        mostrarResultado(`<p>${mensaje}</p>`);
     }
-    //aqui llamamos a los atributos con el operador this. porque es private.
-    arrancar() {
-        const mensaje = `<br/> El coche${this.#marca}, ${this.#modelo}, de color ${this.color} ha arrancado.`;
-        mostrarResultado(`<p>${datos}</p>`);
+    arrancar(){
+        const mensaje = `<br/> EL coche ${this.#marca}, ${this.#modelo}, de color ${this.#color}, ha arrancado`;
+        mostrarResultado(`<p>${mensaje}</p>`);
     }
-
     frenar(){
-        const mensaje = `<br/> El coche${this.#marca}, ${this.#modelo}, de color ${this.color} ha parado.`;
-        mostrarResultado(`<p>${datos}</p>`);
+        const mensaje = `<br/> EL coche ${this.#marca}, ${this.#modelo}, de color ${this.#color}, ha parado`;
+        mostrarResultado(`<p>${mensaje}</p>`);
     }
-
     get marca(){
         return this.#marca;
     }
-    
     set marca(value){
         this.#marca = value;
     }
-
     get modelo(){
         return this.#modelo;
     }
- 
-    set modelo(modelo){
-        this.#modelo = modelo;
-   
+    set modelo(value){
+        this.#modelo = value;
     }
- 
     get color(){
         return this.#color;
     }
- 
-    set color(color){
-        this.#color = color;
-   
+    set color(value){
+        this.#color = value;
     }
- 
     get fabricacion(){
         return this.#fabricacion;
     }
- 
-    set fabricacion(fabricacion){
-        this.#fabricacion = fabricacion;
+    set fabricacion(value){
+        this.#fabricacion = value;
     }
- 
-    get cilindrada() {
+    get cilindrada(){
         return this.#cilindrada;
     }
- 
-    set cilindrada(cilindrada) {
-        this.#cilindrada = cilindrada;
+    set cilindrada(value){
+        this.#cilindrada = value;
     }
-
 }

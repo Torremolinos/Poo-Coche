@@ -1,6 +1,6 @@
 import { Vehiculo } from './vehiculo.js';
 
-class Furgoneta extends Vehiculo {
+ export class Furgoneta extends Vehiculo {
     #pasajeros;
 
     constructor(marca, modelo, color, fabricacion, cilindrada, pasajeros) {
@@ -16,4 +16,4 @@ class Furgoneta extends Vehiculo {
     }
 }
 
-export default Furgoneta;
+// export default Furgoneta;

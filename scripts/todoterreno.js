@@ -1,6 +1,6 @@
-import { Vehiculo } from './vehiculo';
+import { Vehiculo } from './vehiculo.js';
 
-class TodoTerreno extends Vehiculo {
+export class TodoTerreno extends Vehiculo {
     #traccion;
 
     //sino podemos llamar al constructor por defecto aqui lo podemos llamar en el padre.
