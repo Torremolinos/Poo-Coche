@@ -16,4 +16,9 @@ export class TodoTerreno extends Vehiculo {
     set traccion(value) {
         this.#traccion = value;
     }
+    mostrarDatos(){
+        super.mostrarDatos();
+        const datos = `La traccion es: ${this.#traccion}`;
+        mostrarResultado(`<p>${datos}</p>`); //llamamos a la funcion mostrarResultado definida en el main.js
+    }
 }
